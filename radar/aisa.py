@@ -21,6 +21,11 @@ from . import UA
 
 ROUTER = os.environ.get("AISA_ROUTER_BASE_URL", "https://tools.aisa.one") + "/v1/tool-router/aisa-batch-use"
 CHAT = os.environ.get("AISA_API_BASE_URL", "https://api.aisa.one") + "/v1/chat/completions"
+# 自己的模型接口(可选):设置 AISA_CHAT_URL 为完整的 OpenAI 兼容 chat 地址
+# (如 https://api.deepseek.com/v1/chat/completions),配 AISA_CHAT_KEY 为对应 key,
+# chat(名字判断、用例生成)就改走自己的接口;不设置则仍用 AIsa。
+CHAT_URL = os.environ.get("AISA_CHAT_URL", "").strip()
+CHAT_KEY = os.environ.get("AISA_CHAT_KEY", "").strip()
 MAX_CALLS = 20      # the router's own limit per batch
 BATCH = 5           # what call_all sends at once, about 50 s a batch
 TIMEOUT = 240
@@ -51,9 +56,9 @@ def _no_key() -> str:
     raise AisaError("no AIsa key: set AISA_API_KEY, or log in with the AIsa CLI (`aisa login`)")
 
 
-def _post(url: str, body: dict, timeout: int) -> dict:
+def _post(url: str, body: dict, timeout: int, auth: str = "") -> dict:
     req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST", headers={
-        "Content-Type": "application/json", "Authorization": f"Bearer {key()}",
+        "Content-Type": "application/json", "Authorization": f"Bearer {auth or key()}",
         "User-Agent": UA, "x-aisa-source": "new-term-radar"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as res:
@@ -93,8 +98,13 @@ def call_all(calls: list[dict]) -> tuple[dict[str, dict], int]:
 
 
 def chat(model: str, system: str, user: str, max_tokens: int = 1500) -> str:
-    body = _post(CHAT, {"model": model, "temperature": 0, "max_tokens": max_tokens, "messages": [
-        {"role": "system", "content": system}, {"role": "user", "content": user}]}, CHAT_TIMEOUT)
+    # 配置了 AISA_CHAT_URL 就走自己的 OpenAI 兼容接口,否则走 AIsa 的 chat
+    body_dict = {"model": model, "temperature": 0, "max_tokens": max_tokens, "messages": [
+        {"role": "system", "content": system}, {"role": "user", "content": user}]}
+    if CHAT_URL:
+        # DeepSeek 等推理模型默认开思考,思维链会烧光 max_tokens 导致 content 为空,故关闭
+        body_dict["thinking"] = {"type": "disabled"}
+    body = _post(CHAT_URL or CHAT, body_dict, CHAT_TIMEOUT, auth=CHAT_KEY)
     try:
         return body["choices"][0]["message"]["content"] or ""
     except (KeyError, IndexError, TypeError) as exc:

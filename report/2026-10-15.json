@@ -1,0 +1,342 @@
+{
+ "leads": [
+  {
+   "term": "sites",
+   "kinds": [
+    "sitemap"
+   ],
+   "signals": [
+    "③ 竞品 677 处 (×564.2)"
+   ],
+   "examples": [],
+   "variants": [],
+   "posts": [],
+   "known": "",
+   "format": "text",
+   "one_click": null,
+   "named": 0.05
+  }
+ ],
+ "x": {
+  "accounts": 35,
+  "answered": 35,
+  "posts": 660,
+  "cost_micros": 99300,
+  "first_run": true,
+  "terms": []
+ },
+ "hf": {
+  "first_run": true,
+  "terms": [],
+  "models": 100,
+  "spaces": 100
+ },
+ "breakout": {
+  "searched": 198,
+  "first_run": false,
+  "repos": [
+   {
+    "repo": "openai/math",
+    "owner": "openai",
+    "name": "math",
+    "stars": 14883,
+    "velocity": 1716,
+    "delta": 12,
+    "age_days": 8.7,
+    "description": "",
+    "new": false
+   },
+   {
+    "repo": "wheresryan22/anatomy",
+    "owner": "wheresryan22",
+    "name": "anatomy",
+    "stars": 12148,
+    "velocity": 1698,
+    "delta": 220,
+    "age_days": 7.2,
+    "description": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Ge",
+    "new": false
+   },
+   {
+    "repo": "storytold/wordcraft",
+    "owner": "storytold",
+    "name": "wordcraft",
+    "stars": 12893,
+    "velocity": 1568,
+    "delta": 98,
+    "age_days": 8.2,
+    "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
+    "new": false
+   },
+   {
+    "repo": "jhaizhou-ops/d2r-mobile",
+    "owner": "jhaizhou-ops",
+    "name": "d2r-mobile",
+    "stars": 2817,
+    "velocity": 875,
+    "delta": 128,
+    "age_days": 3.2,
+    "description": "Open-source iOS / macOS compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs you",
+    "new": false
+   },
+   {
+    "repo": "Arekejoker/qwen21-nsfw-pose-skill",
+    "owner": "Arekejoker",
+    "name": "qwen21-nsfw-pose-skill",
+    "stars": 1800,
+    "velocity": 735,
+    "delta": 88,
+    "age_days": 2.4,
+    "description": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
+    "new": false
+   },
+   {
+    "repo": "ahwootech/BRUTAL",
+    "owner": "ahwootech",
+    "name": "BRUTAL",
+    "stars": 653,
+    "velocity": 653,
+    "delta": 125,
+    "age_days": 1.0,
+    "description": "A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, wit",
+    "new": false
+   },
+   {
+    "repo": "onehumanbeing/esp32-iphone-agent",
+    "owner": "onehumanbeing",
+    "name": "esp32-iphone-agent",
+    "stars": 2296,
+    "velocity": 607,
+    "delta": 48,
+    "age_days": 3.8,
+    "description": "Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No M",
+    "new": false
+   },
+   {
+    "repo": "storytold/gridcraft",
+    "owner": "storytold",
+    "name": "gridcraft",
+    "stars": 5059,
+    "velocity": 605,
+    "delta": 38,
+    "age_days": 8.4,
+    "description": "GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.",
+    "new": false
+   },
+   {
+    "repo": "storytold/cadcraft",
+    "owner": "storytold",
+    "name": "cadcraft",
+    "stars": 5019,
+    "velocity": 601,
+    "delta": 34,
+    "age_days": 8.4,
+    "description": "CADCraft: computer-aided design and drafting — an open-source, clean-room AutoCAD-style app in pure Rust",
+    "new": false
+   },
+   {
+    "repo": "Caho1/open-claude-ui",
+    "owner": "Caho1",
+    "name": "open-claude-ui",
+    "stars": 596,
+    "velocity": 596,
+    "delta": 62,
+    "age_days": 1.0,
+    "description": "基于 REA 深度拆解并高保真还原 Claude 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000+ 行逆向分析手册。",
+    "new": false
+   },
+   {
+    "repo": "ARahim3/DigUp",
+    "owner": "ARahim3",
+    "name": "DigUp",
+    "stars": 3948,
+    "velocity": 587,
+    "delta": 61,
+    "age_days": 6.7,
+    "description": "Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Wi",
+    "new": false
+   },
+   {
+    "repo": "mhtsec/ARTEX",
+    "owner": "mhtsec",
+    "name": "ARTEX",
+    "stars": 4227,
+    "velocity": 575,
+    "delta": 14,
+    "age_days": 7.4,
+    "description": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目",
+    "new": false
+   },
+   {
+    "repo": "HeyPuter/everything",
+    "owner": "HeyPuter",
+    "name": "everything",
+    "stars": 1002,
+    "velocity": 527,
+    "delta": 98,
+    "age_days": 1.9,
+    "description": "We're rebuilding and open-sourcing the world’s software from scratch.",
+    "new": false
+   },
+   {
+    "repo": "liseami/CCBaga",
+    "owner": "liseami",
+    "name": "CCBaga",
+    "stars": 2325,
+    "velocity": 526,
+    "delta": 7,
+    "age_days": 4.4,
+    "description": "",
+    "new": false
+   },
+   {
+    "repo": "storytold/craft-launcher",
+    "owner": "storytold",
+    "name": "craft-launcher",
+    "stars": 2788,
+    "velocity": 497,
+    "delta": 24,
+    "age_days": 5.6,
+    "description": "The Craft App Launcher",
+    "new": false
+   }
+  ],
+  "terms": [],
+  "window_days": 14
+ },
+ "sitemap": {
+  "sites": {
+   "glama": {
+    "error": "IncompleteRead(214333 bytes read)"
+   },
+   "mcp.so": {
+    "urls": 18853,
+    "new": 12,
+    "first_run": false,
+    "sample": [
+     "https://mcp.so/servers/aicanvas",
+     "https://mcp.so/servers/fund-momentum-mcp-server",
+     "https://mcp.so/servers/howe829_websearch-mcp-server",
+     "https://mcp.so/servers/json-to-excel-mcp",
+     "https://mcp.so/servers/json-validator-x402",
+     "https://mcp.so/servers/jsonbuddy",
+     "https://mcp.so/servers/mcp-interactive",
+     "https://mcp.so/servers/mcp-server-demo-capybara-sfw"
+    ]
+   },
+   "lobehub-mcp": {
+    "urls": 200,
+    "new": 0,
+    "first_run": false,
+    "sample": []
+   },
+   "lobehub-skills": {
+    "urls": 200,
+    "new": 0,
+    "first_run": false,
+    "sample": []
+   },
+   "toolify": {
+    "urls": 692,
+    "new": 0,
+    "first_run": false,
+    "sample": []
+   },
+   "aixploria": {
+    "error": "HTTP Error 403: Forbidden"
+   },
+   "ai-bot.cn": {
+    "urls": 5068,
+    "new": 679,
+    "first_run": false,
+    "sample": [
+     "https://ai-bot.cn/sites/1338.html",
+     "https://ai-bot.cn/sites/43780.html",
+     "https://ai-bot.cn/sites/46015.html",
+     "https://ai-bot.cn/sites/46196.html",
+     "https://ai-bot.cn/sites/46353.html",
+     "https://ai-bot.cn/sites/46429.html",
+     "https://ai-bot.cn/sites/46431.html",
+     "https://ai-bot.cn/sites/47103.html"
+    ]
+   },
+   "opentools": {
+    "urls": 6990,
+    "new": 0,
+    "first_run": false,
+    "sample": []
+   },
+   "dang": {
+    "urls": 7631,
+    "new": 15,
+    "first_run": false,
+    "sample": [
+     "https://dang.ai/integration/chatgpt-plugins-and-gpts",
+     "https://dang.ai/tool/apify",
+     "https://dang.ai/tool/appy-pie",
+     "https://dang.ai/tool/blackmagic-design",
+     "https://dang.ai/tool/checksynthid-synthid-watermark-detector-guide",
+     "https://dang.ai/tool/design-com",
+     "https://dang.ai/tool/emoscan-ai-emotion-detector",
+     "https://dang.ai/tool/gleap"
+    ]
+   },
+   "clipfly": {
+    "urls": 281,
+    "new": 0,
+    "first_run": false,
+    "sample": []
+   },
+   "aitoptools": {
+    "urls": 11826,
+    "new": 1,
+    "first_run": false,
+    "sample": [
+     "https://aitoptools.com/tool/eskimoz/"
+    ]
+   },
+   "futurepedia": {
+    "urls": 1329,
+    "new": 0,
+    "first_run": false,
+    "sample": []
+   }
+  },
+  "terms": [
+   {
+    "term": "sites",
+    "recent": 677,
+    "baseline": 15,
+    "lift": 564.2
+   }
+  ]
+ },
+ "newsite": {
+  "skipped": true
+ },
+ "revenue": {
+  "skipped": true
+ },
+ "ask": {
+  "skipped": true
+ },
+ "gsc": {
+  "off": true
+ },
+ "review": {
+  "checked": [],
+  "cost_micros": 0,
+  "after_days": 14
+ },
+ "summary": {
+  "by_signal": {},
+  "pending": 15,
+  "window_days": 60
+ },
+ "keywords": {
+  "names": [],
+  "rows": [],
+  "proposed": 0,
+  "cost_micros": 0
+ }
+}

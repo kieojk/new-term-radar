@@ -1,6 +1,6 @@
 """new-term-radar: terms that are starting to surge, earliest signal first.
 
-  python -m radar daily    [--config config.json] [--state state] [--out report.md] [--skip x,hf,...] [--new-sites] [--mail]
+  python -m radar daily    [--config config.json] [--state state] [--out report/日期.md,默认当天] [--skip x,hf,...] [--new-sites] [--mail]
   python -m radar sources  [--config config.json] [--state state] [--out sources.md] [--mail]
 
 Signals:
@@ -200,6 +200,11 @@ def main(argv: list[str] | None = None) -> int:
     if unknown:
         p.error(f"--skip: unknown {sorted(unknown)}")
     state = Path(args.state)
+    if args.command == "daily" and not args.out:
+        # daily 不带 --out 时,默认保存为 report/当天日期.md,如 report/2026-10-15.md
+        args.out = str(Path("report") / f"{date.today().isoformat()}.md")
+    if args.out:
+        Path(args.out).parent.mkdir(parents=True, exist_ok=True)  # 输出目录不存在就创建
     if args.command == "leads":
         return cmd_leads(args, state)
     if args.command == "keywords" and not args.names:
